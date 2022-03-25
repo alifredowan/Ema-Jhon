@@ -10,7 +10,6 @@ const Shop = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
-
     const addToCart = (product) => {
         console.log(product);
         setCart([...cart, product])

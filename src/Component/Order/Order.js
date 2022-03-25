@@ -1,10 +1,23 @@
 import React from 'react';
+import "./Order.css"
+const Order = ({cart}) => {
 
-const Order = (props) => {
-    return (
-        <div>
+    let price = 0;
+    let shipping = 0;
+    for(const product of cart){
+        price = price + product.price
+        shipping = shipping + product.shipping 
+    }
+    const tax =parseFloat((price * 10/100).toFixed(2));
+    const total = price + shipping + tax
+     return (
+        <div className='order'>
             <h3>Order Summary</h3>
-            <p>Total: {props.cart.length}</p>
+            <p>Selected Items: {cart.length}</p>
+            <p>Total Price: ৳{price}</p>
+            <p>Total Shipping: ৳{shipping}</p>
+            <p>Tax: ৳{tax}</p>
+            <h5>Grand Total: ৳{total}</h5>
         </div>
     );
 };
