@@ -1,0 +1,32 @@
+.review-container{
+    width: 571px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 21px;
+    display: flex;
+}
+.review-container img{
+    width: 91px;
+}
+.review-container p{ 
+    margin: 0;
+}
+.reviewItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.delete-btn{
+    height: 55px;
+    width: 55px;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgb(56, 3, 3);
+    cursor: pointer;
+}
+.delete-icon{
+    color: rgb(218, 42, 42);
+    font-size: 30px;
+}
