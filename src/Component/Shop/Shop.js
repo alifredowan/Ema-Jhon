@@ -23,8 +23,6 @@ const Shop = () => {
         setCart(saveCart)
     }, [products])
     const addToCart = (product) => {
-        console.log(product);
-        console.log(cart);
         let newCart = [];
         const exists = cart.find(selectedProduct => selectedProduct.id === product.id)
         if (!exists) {
